@@ -1,4 +1,0 @@
-Voting application
-What?
-A functionality where user can vote to the given set of candidates.
-
