@@ -17,7 +17,7 @@ const checkAdminRole = async (userID) =>{
 // POST route to add a candidate
 router.post('/', jwtAuthMiddleware, async (req, res) =>{
     try{
-        if(! await checkAdminRole(req.user.id))
+        if(! await checkAdminRole(req.userPayload.id))
             return res.status(403).json({message:'user does not has admin role'});
 
         const data = req.body // Assuming the request body contains the person data
@@ -36,11 +36,11 @@ router.post('/', jwtAuthMiddleware, async (req, res) =>{
     }
 })
 
-// Function to change the password
+// Function to change the Cadidate details
 router.put('/:candidateID', jwtAuthMiddleware, async (req, res)=>{
     try{
 
-        if(! await checkAdminRole(req.user.id))
+        if(! await checkAdminRole(req.userPayload.id))
             return res.status(403).json({message:'user does not has admin role'});
 
         const candidateID = req.params.candidateID;
@@ -66,7 +66,7 @@ router.put('/:candidateID', jwtAuthMiddleware, async (req, res)=>{
 // Function to delete a candidate
 router.delete('/:candidateID', jwtAuthMiddleware, async(req, res)=>{
     try{
-        if(! await checkAdminRole(res.user.id))
+        if(! await checkAdminRole(req.userPayload.id))
             return res.status(403).json({message: 'user does not have admin role'});
 
         const candidateID = req.params.candidateID;

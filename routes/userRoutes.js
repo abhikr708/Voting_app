@@ -62,9 +62,10 @@ router.post('/login', async(req, res)=>{
 // Profile route
 router.get('/profile', jwtAuthMiddleware, async (req, res) => {
     try{
-        const userData = req.user;
+        const userData = req.userPayload.id;
         const userId = userData.id;
-        const user = await User.findById(userId);
+        // console.log("userId: ", userId);
+        const user = await User.findOne({id:userId});
 
         res.status(200).json({user});
     }catch(err){
@@ -76,7 +77,7 @@ router.get('/profile', jwtAuthMiddleware, async (req, res) => {
 // Function to change the password
 router.put('/:profile/password', jwtAuthMiddleware, async (req, res)=>{
     try{
-        const userId = req.user; // Extract the id from the Token
+        const userId = req.userPayload.id; // Extract the id from the Token
         const {currentPassword, newPassword} = req.body; // Extract the currentPassword and the newPassword from the request body
 
         // Find the user by userID
