@@ -5,7 +5,7 @@
         "mobile": "9876543210",
         "email": "ravi@example.com",
         "address": "123, ABC Street, XYZ City",
-        "aadharCardNumber": 123456789012,
+        "aadharNumber": 123456789012,
         "password": "password123"
     },
     {
@@ -14,7 +14,7 @@
         "mobile": "8765432109",
         "email": "sita@example.com",
         "address": "456, PQR Street, LMN City",
-        "aadharCardNumber": 234567890123,
+        "aadharNumber": 234567890123,
         "password": "password456"
     },
     {
@@ -23,7 +23,7 @@
         "mobile": "7654321098",
         "email": "amit@example.com",
         "address": "789, DEF Street, UVW City",
-        "aadharCardNumber": 345678901234,
+        "aadharNumber": 345678901234,
         "password": "password789",
         "role": "admin"
     },
@@ -33,7 +33,7 @@
         "mobile": "6543210987",
         "email": "priya@example.com",
         "address": "321, GHI Street, OPQ City",
-        "aadharCardNumber": 456789012345,
+        "aadharNumber": 456789012345,
         "password": "password123"
     },
     {
@@ -42,7 +42,7 @@
         "mobile": "5432109876",
         "email": "arun@example.com",
         "address": "654, JKL Street, RST City",
-        "aadharCardNumber": 567890123456,
+        "aadharNumber": 567890123456,
         "password": "password456"
     },
     {
@@ -51,7 +51,7 @@
         "mobile": "4321098765",
         "email": "suresh@example.com",
         "address": "987, MNO Street, UVW City",
-        "aadharCardNumber": 678901234567,
+        "aadharNumber": 678901234567,
         "password": "password789"
     }
 ]
